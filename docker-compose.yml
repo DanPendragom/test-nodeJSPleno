@@ -1,0 +1,21 @@
+version: '3'
+
+services: 
+    server:
+        build: ./server
+        ports: 
+            - "4000:4000"
+        volumes: 
+            - /user/app/testnodejs-server
+        command: npm start
+
+    client:
+        build: ./client
+        ports: 
+            - "3000:3000"
+        volumes: 
+            - /user/app/testnodejs-client/src
+            - /user/app/testnodejs-client/public
+        links: 
+            - server
+        command: npm start
