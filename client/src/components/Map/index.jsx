@@ -9,8 +9,8 @@ class Map extends Component {
     state = {
         places: [],
     }
-    
-    componentDidMount() {   
+
+    componentDidMount() {
         const button = document.getElementById('btn')
         button.onclick = this.handleSubmitRequest
     }
@@ -23,7 +23,7 @@ class Map extends Component {
     }
 
     registerToSocket() {
-        const socket = io('http://localhost:3001');
+        const socket = io('http://localhost:4000');
     }
 
     getMaker(maker) {
@@ -114,8 +114,28 @@ export default class MeuMapa extends Component {
                     displayMarker: { lat: [-23.465580, -23.626725], lng: [-46.344040, -46.604278] }
                 }); // Zona Leste
                 break
+            case '7':
+                await this.setState({
+                    displayMarker: { lat: [-23.562837, -24.002952], lng: [-46.612915, -46.771947] }
+                }); // Zona Sul 
+                break
+            case '8':
+                await this.setState({
+                    displayMarker: { lat: [-23.511402, -23.582969], lng: [-46.684003, -46.761128] }
+                }); // Zona Oeste 
+                break
+            case '9':
+                await this.setState({
+                    displayMarker: { lat: [-23.457883, -23.514020], lng: [-46.619073, -46.666679] }
+                }); // Zona Norte
+                break
+            case '10':
+                await this.setState({
+                    displayMarker: { lat: [-23.504191, -23.589837], lng: [-46.587632, -46.686200] }
+                }); // Centro
+                break
             default:
-                alert('alert')
+                alert('Local inválido')
                 break
         }
     }
@@ -140,7 +160,11 @@ export default class MeuMapa extends Component {
                             <option value="4">Cubatão</option>
                             <option value="5">Guarujá</option>
                             <option value="6">Zona Leste</option>
-                            <option value="0">Tudo</option>
+                            <option value="7">Zona Sul</option>
+                            <option value="8">Zona Oeste</option>
+                            <option value="9">Zona Norte</option>
+                            <option value="10">Centro</option>
+                            <option value="0">Exibir todos</option>
                         </select>
 
                         <Agrupamento>

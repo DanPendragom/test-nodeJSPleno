@@ -1,5 +1,5 @@
-# Makers Maneger
-Aplicação de agrupamento de makers utilizando react, nodejs, react-google-maps e docker
+# Markers Maneger
+Aplicação de agrupamento de markers utilizando react, nodejs, react-google-maps e docker
 
 ### Recursos
 
