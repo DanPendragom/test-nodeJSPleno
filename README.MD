@@ -1,3 +1,6 @@
+# Makers Maneger
+Aplicação de agrupamento de makers utilizando react, nodejs, react-google-maps e docker
+
 ### Recursos
 
 - Agrupamento de pontos com Cluster
