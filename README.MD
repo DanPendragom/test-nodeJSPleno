@@ -1,4 +1,4 @@
-# Markers Maneger
+# Markers Manager
 Aplicação de agrupamento de markers utilizando react, nodejs, react-google-maps e docker
 
 ### Recursos
