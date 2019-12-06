@@ -1,0 +1,21 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Maps Manager API",
+        "description": "A minimal api for manager markers places in google-maps-api",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/license/MIT"
+        }
+    },
+    "definitions": {
+        "id": {
+            "properties": {
+                "id":{
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
