@@ -9,11 +9,41 @@
             "url": "https://opensource.org/license/MIT"
         }
     },
-    "definitions": {
-        "id": {
-            "properties": {
-                "id":{
-                    "type": "string"
+    "host": "localhost:4000",
+    "basePath": "/",
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "Get Markers"
+                ],
+                "summary": "Get Markers",
+                "parameters": [
+                    {
+                        "name": "placemarked",
+                        "in": "query",
+                        "description": "Passe as cordeenadas de dois pontos pare trazer todos os markers localizados entre estes pontos",
+                        "required": true,
+                        "type": "string",
+                        "default": {
+                            "lat": [
+                                -24.03194,
+                                -24.081513
+                            ],
+                            "lng": [
+                                -46.399934,
+                                -46.605015
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Failed operation"
+                    }
                 }
             }
         }

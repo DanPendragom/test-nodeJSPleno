@@ -18,6 +18,7 @@ class Map extends Component {
     handleSubmitRequest = async () => {
         this.registerToSocket()
         const resp = JSON.stringify(this.props.propplacemarked)
+        console.log(resp)
         const response = await api.get(`/?placemarked=${resp}`)
         await this.setState({ places: response.data })
     }
@@ -135,7 +136,6 @@ export default class MeuMapa extends Component {
                 }); // Centro
                 break
             default:
-                alert('Local inválido')
                 break
         }
     }
@@ -146,7 +146,7 @@ export default class MeuMapa extends Component {
             <Container style={{ height: '100vh', width: '100vw', display: 'flex' }}>
                 <MenuLateral>
                     <header>
-                        <h1>Contele</h1>
+                        <h1>Markers Manager</h1>
                     </header>
                     <Form>
                         <label>Selecione a região</label>

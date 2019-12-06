@@ -7,6 +7,9 @@ Aplicação de agrupamento de markers utilizando react, nodejs, react-google-map
 - Delimitação de pontos por área 
 - Plotagem dos pontos no mapa em tempo real
 
+
+![](/assets/frontend.png)
+
 ----
 ### Executando com Docker
 
@@ -41,3 +44,36 @@ ou
 
 Após a conclusão execute: 
 `$ npm start`
+
+----
+
+### Testes - Swagger
+
+Para testar a rota da nossa API, usaremos o Swagger 
+
+![](/assets/telainicial.png)
+
+Acessando o _localhost:/PORTA_API/swagger_ vamos ter acesso a interface de testes do swagger, com nossas rotas e também os models da API caso houvesse algum. No caso desta API acessaremos o link abaixo:
+
+> Swagger Interface: http://localhost:4000/swagger/
+
+Na interface do swagger acessaremos nossa rota **Get Markers**
+
+![](/assets/parameters.png)
+
+**Get Makers** recebe um parâmetro de consulta para ter um retorno válido, este parâmetro equivale  as coornedanadas de dois pontos (A e B) e o retorno será igual a todos os valores ou, "markers" localizados entre estes pontos. 
+
+> Get Markers receberá uma string como Query Parameter, essa string deve seguir a formatação apresentada como "Default" pois será convertida em um **Objeto**
+
+```
+"default": {
+    "lat": [
+        -24.03194,
+        -24.081513
+    ],
+    "lng": [
+        -46.399934,
+        -46.605015
+    ]
+}
+```
